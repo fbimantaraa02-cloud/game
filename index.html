@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20261016-02-bd0be6f","C":{"Abril Fatface":"YACgEZbkUVE,0","Albert Sans":"YAHO2HRfeh4,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo Black":"YACgEZulLoA,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Baloo 2":"YAHO2IcQUcM,0","Barlow Condensed":"YAFdJljEuFc,0","Barlow":"YAFdJsyuOPM,1","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Cairo":"YAFdtXpDzlQ,0","Canva Sans":"YAFdJjTk5UU,1","Caveat":"YALBs2ploWQ,0","Cinzel":"YACgEeV8bIQ,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","Courier Prime":"YAD1aFjegN8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Figtree":"YAHO2b-mV7A,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAFdJpU7Kkk,0","Fredoka":"YACgEZml080,0","Georgia":"YAGzXkO0pEM,0","Hanken Grotesk":"YAHO2VB9G0I,0","Helvetica":"YAFcf7zkXN0,0","IBM Plex Mono":"YAFdJkmvhGI,0","IBM Plex Sans":"YAFdJgT0SHI,0","Impact":"YAFcfnjI7Vk,0","Instrument Sans":"YAHO2bKyaSQ,0","Instrument Serif":"YAHFeOnZNEk,0","Inter":"YAFdJvSyp_k,3","Italiana":"YAHO2Toik_w,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Josefin Sans":"YAFdJjvw9Ps,0","Karla":"YAHO2V2NSXM,0","Lato":"YAFdJuFCnaw,0","Libre Baskerville":"YACgEUFdPdA,0","Libre Caslon Display":"YAHO2XhLmt0,0","Lobster":"YAD8SnSjSFI,0","Lora":"YACgEXvxf8Q,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YAFdtQi73Xs,0","Noto Sans JP":"YAFdJiHXlcI,0","Noto Sans KR":"YAGsojZj-RQ,0","Nunito Sans":"YAFdtQJYB9w,1","Nunito":"YAFdJoNRMmU,1","Oleo Script":"YACgEQQ14jI,0","Open Sans":"YAFdJt8dAY0,1","Oswald":"YACgEQY10lw,0","Outfit":"YAHO2nVlg14,0","Pacifico":"YADLjORQ1u4,0","Playfair Display":"YAFdJhem5V8,1","Plus Jakarta Sans":"YAHO2gdhi18,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Public Sans":"YAFdJj8NdaU,1","Quicksand":"YAFdJpYtCxE,1","Raleway":"YAFdJhmxbVQ,1","Roboto Slab":"YAFdJswIKAg,0","Rockwell":"YAFcfyVZnN0,0","Rye":"YACgEdQP21k,0","STIX Two Text":"YAHO2joycuk,0","Sarabun":"YAFdJssSnME,0","Schibsted Grotesk":"YAHO2sWydRk,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Space Grotesk":"YAHO2sjPCSM,0","Space Mono":"YADW1-vpsoc,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Trebuchet MS":"YAFcfrglpVA,0","Ubuntu":"YACgERDU--Q,0","Verdana":"YAGzXTctYtQ,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0"}}');</script>
+  <script src="/_sdk/05db820ba1544614.telemetry_sdk.js" integrity="sha512-a7JzkQDDcioSXpM61nxTfeRW7PcxWQy5+BrhyeTFmQFsXJ+Gncm0y50u7fTA7qOPegFnRgqCfa0mGUOK1yjDWQ=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mini Games Coding Dasar</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#17345b; --blue:#2457bd; --pale:#eaf5ff; --yellow:#ffdf65; }
+    * { box-sizing:border-box; }
+    body { font-family:"DM Sans",sans-serif; color:var(--ink); }
+    .app-shell { width:100%; min-height:100%; background-image:radial-gradient(circle at 8% 12%,#fff8d6 0,transparent 30%),radial-gradient(circle at 92% 80%,#d5e9ff 0,transparent 32%); }
+    .activity-card { background:#fff; border:2px solid #cadcf4; box-shadow:0 9px 0 #d1e4f8; }
+    .action-button,.choice-button { min-height:54px; border-radius:16px; font-weight:700; transition:transform .15s,box-shadow .15s,background .15s; }
+    .action-button:hover,.choice-button:hover:not(:disabled) { transform:translateY(-2px); }
+    .choice-button { width:100%; text-align:left; padding:14px 18px; border:2px solid #9dbbe5; background:#f7fbff; color:var(--ink); }
+    .choice-button:hover:not(:disabled) { background:#e5f1ff; border-color:var(--blue); }
+    .choice-button:disabled { cursor:default; }
+    .choice-button.correct { border-color:#18754b; background:#dcf8e9; }
+    .choice-button.incorrect { border-color:#a94a35; background:#fff0e9; }
+    :focus-visible { outline:4px solid #d37400 !important; outline-offset:3px; }
+    [hidden] { display:none !important; }
+    .reveal { animation:appear .35s ease both; }
+    @keyframes appear { from { opacity:0;transform:translateY(10px) } to { opacity:1;transform:translateY(0) } }
+    @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms !important;transition-duration:.01ms !important; } }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="/_sdk/570d53629f0b998d.data_sdk.js" type="text/javascript" integrity="sha512-JEN39+V+Nvv9ZZOVS8vNk1iA9ErZJHTdgOw9KzPuMiK7m0I+KPEr/wmTnCFIQVsDjCZgJWfGnFi1IQh2Io2qyA=="></script>
+  <script src="/_sdk/7825871aa95c503d.editing_sdk.js" type="text/javascript" integrity="sha512-2lFhP7fVLyI/xh1XVD1wGvcEUDBQxBW40AsWL6PQ5RZg0/hxM41hBHE/wQF1zqhE8vvzASF/osL1pnlucLWnaQ=="></script>
+  <script src="/_sdk/f195026a424c1f85.resizing_sdk.js" type="text/javascript" integrity="sha512-8On4Z+AXh1abEzZJ9Dbn9wOvFg+k1LsAaAzKGQ7LlfgXajZ9xEmZaZ1QVzv0AWhCZtCsEpWSOG9DgLri06TS7A=="></script>
+</head>
+<body data-template-id="__page-root" class="w-full m-0" style="background: rgb(234, 245, 255);">
+ <div class="app-shell w-full px-4 py-7 sm:px-8 sm:py-10">
+  <header class="max-w-5xl mx-auto mb-7">
+   <div data-template-id="eyebrow" class="canva-tag inline-block rounded-full px-4 py-2 font-bold mb-4" style="background: rgb(255, 223, 101); color: rgb(23, 52, 91); font-weight: 700; font-style: normal; font-size: 16px;">BELAJAR SAMBIL BERMAIN ✨</div>
+   <h1 data-template-id="page-title" class="canva-text font-extrabold leading-tight" style="color: rgb(23, 52, 91); font-weight: 800; font-style: normal; font-size: 32px;">Mini Games Coding Dasar</h1>
+   <p data-template-id="page-subtitle" class="canva-text mt-3 max-w-2xl leading-relaxed" style="color: rgb(52, 82, 115); font-weight: 400; font-style: normal; font-size: 16px;">Sudah belajar tentang web? Saatnya mencoba berbagai tantangan seru tentang HTML dan CSS!</p>
+  </header>
+  <main class="max-w-5xl mx-auto">
+   <section id="menu" aria-labelledby="menu-heading" class="reveal">
+    <h2 id="menu-heading" data-template-id="menu-heading" class="canva-text font-bold mb-5" style="color: rgb(23, 52, 91); font-weight: 700; font-style: normal; font-size: 24px;">Pilih permainanmu</h2>
+    <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+     <article data-template-id="quiz-card" class="canva-card activity-card rounded-3xl p-6 flex flex-col" style="background: rgb(255, 255, 255);">
+      <div class="text-4xl mb-4" aria-hidden="true">🧩</div>
+      <h3 data-template-id="quiz-card-title" class="canva-text font-extrabold mb-2" style="color: rgb(23, 52, 91); font-weight: 800; font-style: normal; font-size: 19px;">Kuis HTML &amp; CSS</h3>
+      <p data-template-id="quiz-card-desc" class="canva-text leading-relaxed mb-6 flex-1" style="color: rgb(52, 82, 115); font-weight: 400; font-style: normal; font-size: 16px;">Uji pemahamanmu lewat berbagai pertanyaan seputar HTML dan CSS.</p><button type="button" data-game="quiz" data-template-id="quiz-open" class="canva-button action-button open-game px-5 py-3 text-left" style="background: rgb(36, 87, 189); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Mainkan kuis →</button>
+     </article>
+     <article data-template-id="order-card" class="canva-card activity-card rounded-3xl p-6 flex flex-col" style="background: rgb(255, 255, 255);">
+      <div class="text-4xl mb-4" aria-hidden="true">🏗️</div>
+      <h3 data-template-id="order-card-title" class="canva-text font-extrabold mb-2" style="color: rgb(23, 52, 91); font-weight: 800; font-style: normal; font-size: 19px;">Susun Struktur HTML</h3>
+      <p data-template-id="order-card-desc" class="canva-text leading-relaxed mb-6 flex-1" style="color: rgb(52, 82, 115); font-weight: 400; font-style: normal; font-size: 16px;">Pilih bagian-bagian halaman web sesuai urutan yang tepat.</p><button type="button" data-game="order" data-template-id="order-open" class="canva-button action-button open-game px-5 py-3 text-left" style="background: rgb(36, 87, 189); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Mulai menyusun →</button>
+     </article>
+     <article data-template-id="style-card" class="canva-card activity-card rounded-3xl p-6 flex flex-col" style="background: rgb(255, 255, 255);">
+      <div class="text-4xl mb-4" aria-hidden="true">🎨</div>
+      <h3 data-template-id="style-card-title" class="canva-text font-extrabold mb-2" style="color: rgb(23, 52, 91); font-weight: 800; font-style: normal; font-size: 19px;">Tebak Styling CSS</h3>
+      <p data-template-id="style-card-desc" class="canva-text leading-relaxed mb-6 flex-1" style="color: rgb(52, 82, 115); font-weight: 400; font-style: normal; font-size: 16px;">Baca kode CSS dan tebak perubahan tampilannya.</p><button type="button" data-game="style" data-template-id="style-open" class="canva-button action-button open-game px-5 py-3 text-left" style="background: rgb(36, 87, 189); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Tebak tampilannya →</button>
+     </article>
+     <article data-template-id="gerak-card" class="canva-card activity-card rounded-3xl p-6 flex flex-col" style="background: rgb(255, 255, 255);">
+      <div class="text-4xl mb-4" aria-hidden="true">🤖</div>
+      <h3 data-template-id="gerak-card-title" class="canva-text font-extrabold mb-2" style="color: rgb(23, 52, 91); font-weight: 800; font-style: normal; font-size: 19px;">Tebak Gerak Coding</h3>
+      <p data-template-id="gerak-card-desc" class="canva-text leading-relaxed mb-6 flex-1" style="color: rgb(52, 82, 115); font-weight: 400; font-style: normal; font-size: 16px;">Bergerak, menebak, dan tertawa bersama teman sekelas!</p><button type="button" id="gerak-open" data-template-id="gerak-open" class="canva-button action-button px-5 py-3 text-left" style="background: rgb(36, 87, 189); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Mainkan gerak →</button>
+     </article>
+    </div>
+   </section>
+   <section id="game-view" class="activity-card rounded-3xl p-5 sm:p-8 max-w-3xl mx-auto reveal" hidden="" aria-label="Area permainan">
+    <div class="flex flex-wrap justify-between items-center gap-3 mb-5"><span data-template-id="game-badge" class="canva-tag rounded-full px-4 py-2 font-bold" style="background: rgb(255, 223, 101); color: rgb(23, 52, 91); font-weight: 700; font-style: normal; font-size: 16px;">TANTANGAN CODING ⚡</span> <button type="button" data-template-id="top-menu" class="canva-button menu-button rounded-xl px-4 py-3 font-bold border-2 border-current" style="background: rgb(255, 255, 255); color: rgb(36, 87, 189); font-weight: 700; font-style: normal; font-size: 16px;">← Kembali ke Menu</button>
+    </div>
+    <div id="intro">
+     <h2 id="intro-title" class="font-extrabold text-2xl sm:text-3xl mb-3"></h2>
+     <p id="intro-instruction" class="leading-relaxed mb-7"></p><button type="button" data-template-id="start-button" id="start" class="canva-button action-button px-8 py-3" style="background: rgb(36, 87, 189); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Mulai!</button>
+    </div>
+    <div id="play" hidden="">
+     <div class="flex flex-wrap justify-between gap-2 font-bold mb-3"><span id="progress-text" aria-live="polite"></span><span id="score-text" aria-live="polite"></span>
+     </div>
+     <div class="w-full h-3 rounded-full bg-blue-100 mb-7 overflow-hidden" role="progressbar" id="progress-bar" aria-label="Progres permainan" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <div id="progress-fill" class="h-full rounded-full bg-[#2457bd] transition-all duration-300" style="width:0%"></div>
+     </div>
+
+     <!-- KUIS HTML & CSS (4 Soal) -->
+     <div class="question" data-game-panel="quiz" data-question="0" hidden="">
+      <h2 class="canva-text font-extrabold mb-5" style="color: rgb(23, 52, 91); font-weight: 800; font-style: normal; font-size: 24px;">Apa fungsi utama HTML pada halaman web?</h2>
+      <div class="grid gap-3">
+       <button type="button" data-answer="0" class="canva-button choice-button">Mengubah warna tulisan</button> 
+       <button type="button" data-answer="1" class="canva-button choice-button">Menyusun isi dan struktur halaman</button> 
+       <button type="button" data-answer="2" class="canva-button choice-button">Mengatur kecepatan internet</button>
+      </div>
+     </div>
+     <div class="question" data-game-panel="quiz" data-question="1" hidden="">
+      <h2 class="canva-text font-extrabold mb-5" style="color: rgb(23, 52, 91); font-weight: 800; font-style: normal; font-size: 24px;">Apa fungsi utama CSS?</h2>
+      <div class="grid gap-3">
+       <button type="button" data-answer="0" class="canva-button choice-button">Membuat alamat situs web</button> 
+       <button type="button" data-answer="1" class="canva-button choice-button">Menulis isi paragraf</button> 
+       <button type="button" data-answer="2" class="canva-button choice-button">Mengatur tampilan dan gaya halaman</button>
+      </div>
+     </div>
+     <div class="question" data-game-panel="quiz" data-question="2" hidden="">
+      <h2 class="canva-text font-extrabold mb-5" style="color: rgb(23, 52, 91); font-weight: 800; font-style: normal; font-size: 24px;">Tag HTML apa yang digunakan untuk membuat judul (heading) paling besar?</h2>
+      <div class="grid gap-3">
+       <button type="button" data-answer="0" class="canva-button choice-button">&lt;h1&gt;</button> 
+       <button type="button" data-answer="1" class="canva-button choice-button">&lt;h6&gt;</button> 
+       <button type="button" data-answer="2" class="canva-button choice-button">&lt;p&gt;</button>
+      </div>
+     </div>
+     <div class="question" data-game-panel="quiz" data-question="3" hidden="">
+      <h2 class="canva-text font-extrabold mb-5" style="color: rgb(23, 52, 91); font-weight: 800; font-style: normal; font-size: 24px;">Properti CSS apa yang digunakan untuk mengubah warna latar belakang (background)?</h2>
+      <div class="grid gap-3">
+       <button type="button" data-answer="0" class="canva-button choice-button">color</button> 
+       <button type="button" data-answer="1" class="canva-button choice-button">background-color</button> 
+       <button type="button" data-answer="2" class="canva-button choice-button">font-size</button>
+      </div>
+     </div>
+
+     <!-- SUSUN STRUKTUR HTML -->
+     <div class="question" data-game-panel="order" hidden="">
+      <h2 data-template-id="order-question" class="canva-text font-extrabold mb-2" style="color: rgb(23, 52, 91); font-weight: 800; font-style: normal; font-size: 24px;">Susun bagian-bagian HTML dari awal!</h2>
+      <p data-template-id="order-hint" class="canva-text mb-5" style="color: rgb(52, 82, 115); font-weight: 400; font-style: normal; font-size: 16px;">Petunjuk: pilih deklarasi dokumen dahulu, lalu bagian luar, kepala, dan isi.</p>
+      <div id="selected-order" class="min-h-[54px] rounded-xl border-2 border-dashed border-[#9dbbe5] p-3 mb-5 font-bold" aria-live="polite"></div>
+      <div class="grid sm:grid-cols-2 gap-3">
+       <button type="button" data-step="2" class="canva-button choice-button">&lt;head&gt;</button> 
+       <button type="button" data-step="4" class="canva-button choice-button">&lt;body&gt;</button> 
+       <button type="button" data-step="1" class="canva-button choice-button">&lt;!DOCTYPE html&gt;</button> 
+       <button type="button" data-step="3" class="canva-button choice-button">&lt;html&gt;</button>
+      </div>
+     </div>
+
+     <!-- TEBAK STYLING CSS (4 Soal) -->
+     <div class="question" data-game-panel="style" data-question="0" hidden="">
+      <h2 class="canva-text font-extrabold mb-4" style="color: rgb(23, 52, 91); font-weight: 800; font-style: normal; font-size: 24px;">Jika aturan ini diterapkan pada judul, bagaimana warnanya?</h2>
+      <div class="canva-panel rounded-xl px-5 py-4 font-mono font-bold mb-5" style="background: rgb(234, 245, 255); color: rgb(23, 52, 91);">h1 { color: blue; }</div>
+      <div class="grid gap-3">
+       <button type="button" data-answer="0" class="canva-button choice-button">Tulisan judul menjadi biru</button> 
+       <button type="button" data-answer="1" class="canva-button choice-button">Latar judul menjadi biru</button> 
+       <button type="button" data-answer="2" class="canva-button choice-button">Tulisan judul menjadi merah</button>
+      </div>
+     </div>
+     <div class="question" data-game-panel="style" data-question="1" hidden="">
+      <h2 class="canva-text font-extrabold mb-4" style="color: rgb(23, 52, 91); font-weight: 800; font-style: normal; font-size: 24px;">Apa yang terjadi pada paragraf dengan aturan ini?</h2>
+      <div class="canva-panel rounded-xl px-5 py-4 font-mono font-bold mb-5" style="background: rgb(234, 245, 255); color: rgb(23, 52, 91);">p { text-align: center; }</div>
+      <div class="grid gap-3">
+       <button type="button" data-answer="0" class="canva-button choice-button">Paragraf menjadi tebal</button> 
+       <button type="button" data-answer="1" class="canva-button choice-button">Teks paragraf menjadi rata tengah</button> 
+       <button type="button" data-answer="2" class="canva-button choice-button">Paragraf menghilang</button>
+      </div>
+     </div>
+     <div class="question" data-game-panel="style" data-question="2" hidden="">
+      <h2 class="canva-text font-extrabold mb-4" style="color: rgb(23, 52, 91); font-weight: 800; font-style: normal; font-size: 24px;">Bagaimana ukuran huruf teks dengan aturan berikut?</h2>
+      <div class="canva-panel rounded-xl px-5 py-4 font-mono font-bold mb-5" style="background: rgb(234, 245, 255); color: rgb(23, 52, 91);">body { font-size: 20px; }</div>
+      <div class="grid gap-3">
+       <button type="button" data-answer="0" class="canva-button choice-button">Ukuran huruf seluruh halaman menjadi 20 piksel</button> 
+       <button type="button" data-answer="1" class="canva-button choice-button">Hanya menebalkan tulisan</button> 
+       <button type="button" data-answer="2" class="canva-button choice-button">Membuat huruf miring</button>
+      </div>
+     </div>
+     <div class="question" data-game-panel="style" data-question="3" hidden="">
+      <h2 class="canva-text font-extrabold mb-4" style="color: rgb(23, 52, 91); font-weight: 800; font-style: normal; font-size: 24px;">Apa hasil dari kode CSS berikut?</h2>
+      <div class="canva-panel rounded-xl px-5 py-4 font-mono font-bold mb-5" style="background: rgb(234, 245, 255); color: rgb(23, 52, 91);">div { background-color: yellow; }</div>
+      <div class="grid gap-3">
+       <button type="button" data-answer="0" class="canva-button choice-button">Warna teks kotak menjadi kuning</button> 
+       <button type="button" data-answer="1" class="canva-button choice-button">Warna latar belakang kotak menjadi kuning</button> 
+       <button type="button" data-answer="2" class="canva-button choice-button">Kotak menjadi transparan</button>
+      </div>
+     </div>
+
+     <div id="feedback" class="mt-6 rounded-2xl p-4 font-bold" aria-live="assertive" hidden="">
+      <p id="correct-feedback" class="canva-text" hidden="" style="color: rgb(21, 93, 61);">Betul! Kerja bagus, lanjutkan! 🎉</p>
+      <p id="wrong-feedback" class="canva-text" hidden="" style="color: rgb(145, 65, 47);">Belum tepat, tidak apa-apa! Kamu sedang belajar. 🌱</p>
+      <p id="order-wrong-feedback" class="canva-text" hidden="" style="color: rgb(145, 65, 47);">Hampir! Coba pilih bagian yang muncul lebih awal. Kamu pasti bisa! 🌱</p>
+     </div>
+     <button type="button" id="next" class="canva-button action-button mt-5 px-7 py-3" hidden="" style="background: rgb(36, 87, 189); color: rgb(255, 255, 255); font-weight: 700;">Lanjut →</button>
+    </div>
+    <div id="result" hidden="">
+     <div class="text-5xl mb-4" aria-hidden="true">🌟</div>
+     <h2 class="canva-text font-extrabold mb-3" style="color: rgb(23, 52, 91); font-weight: 800; font-size: 24px;">Tantangan selesai!</h2>
+     <p id="final-score" class="font-extrabold text-2xl mb-3" aria-live="polite"></p>
+     <p class="canva-text leading-relaxed mb-7" style="color: rgb(52, 82, 115);">Hebat sudah mencoba! Setiap langkah membuatmu makin jago memahami web. 🚀</p>
+     <div class="flex flex-wrap gap-3">
+      <button type="button" id="retry" class="canva-button action-button px-6 py-3" style="background: rgb(36, 87, 189); color: rgb(255, 255, 255); font-weight: 700;">Coba Lagi</button> 
+      <button type="button" class="canva-button menu-button action-button px-6 py-3 border-2 border-current" style="background: rgb(255, 255, 255); color: rgb(36, 87, 189); font-weight: 700;">Kembali ke Menu</button>
+     </div>
+    </div>
+   </section>
+   
+   <!-- Bagian Gerak (Ice Breaking) -->
+   <section id="gerak-view" class="activity-card rounded-3xl p-5 sm:p-8 max-w-3xl mx-auto reveal" aria-labelledby="gerak-heading" hidden="">
+    <div class="flex flex-wrap justify-between items-center gap-3 mb-6"><span class="canva-tag rounded-full px-4 py-2 font-bold" style="background: rgb(255, 223, 101); color: rgb(23, 52, 91);">ICE BREAKING 🤖</span> <button type="button" class="canva-button gerak-menu rounded-xl px-4 py-3 font-bold border-2 border-current" style="background: rgb(255, 255, 255); color: rgb(36, 87, 189);">← Kembali ke Menu</button>
+    </div>
+    <div id="gerak-intro">
+     <h2 id="gerak-heading" class="canva-text font-extrabold mb-3" style="color: rgb(23, 52, 91); font-size: 26px;">Tebak Gerak Coding</h2>
+     <p class="canva-text leading-relaxed mb-4" style="color: rgb(52, 82, 115);">Baca kartu, lalu peragakan atau jawab bersama teman. Setelah mencoba, tekan Tantangan Berikutnya untuk mendapat satu poin!</p>
+     <p class="canva-text rounded-xl px-4 py-3 mb-6" style="background: rgb(234, 245, 255); color: rgb(23, 52, 91);">Cukup bermain langsung di kelas. Tidak perlu merekam video atau memasukkan data pribadi. 🙌</p>
+     <div class="flex items-center gap-3 mb-6"><input id="group-mode" type="checkbox" class="w-6 h-6 accent-[#2457bd]"> <label for="group-mode" class="canva-text font-bold cursor-pointer" style="color: rgb(23, 52, 91);">Mode kelompok: bergantian Kelompok A dan B</label>
+     </div><button type="button" id="gerak-start" class="canva-button action-button px-8 py-3" style="background: rgb(36, 87, 189); color: rgb(255, 255, 255); font-weight: 700;">Mulai</button>
+    </div>
+    <div id="gerak-play" hidden="">
+     <div class="flex flex-wrap justify-between gap-3 font-bold mb-4" aria-live="polite"><span id="gerak-round"></span><span id="gerak-score"></span>
+     </div>
+     <p id="gerak-turn" class="font-bold mb-4" aria-live="polite" hidden=""></p>
+     <div class="canva-panel rounded-2xl p-6 sm:p-8 mb-5 border-2 border-[#cadcf4]" style="background: rgb(234, 245, 255);">
+      <p class="canva-text font-bold mb-3" style="color: rgb(36, 87, 189);">KARTU TANTANGAN ✨</p>
+      <h2 id="gerak-challenge-text" class="canva-text font-extrabold leading-snug" style="color: rgb(23, 52, 91); font-size: 22px;"></h2>
+     </div>
+     <p class="canva-text mb-5" style="color: rgb(52, 82, 115);">Sudah mencoba? Lanjut untuk mendapat poin, atau lewati jika ingin ganti tantangan.</p>
+     <div class="flex flex-wrap gap-3"><button type="button" id="gerak-next" class="canva-button action-button px-6 py-3" style="background: rgb(36, 87, 189); color: rgb(255, 255, 255); font-weight: 700;">Tantangan Berikutnya →</button> <button type="button" id="gerak-skip" class="canva-button action-button px-6 py-3 border-2 border-current" style="background: rgb(255, 255, 255); color: rgb(36, 87, 189); font-weight: 700;">Lewati</button>
+     </div>
+    </div>
+    <div id="gerak-result" hidden="">
+     <div class="text-5xl mb-4" aria-hidden="true">🎉</div>
+     <h2 class="canva-text font-extrabold mb-3" style="color: rgb(23, 52, 91); font-size: 24px;">Kelas hebat, tantangan selesai!</h2>
+     <p id="gerak-final-score" class="font-extrabold text-2xl mb-3" aria-live="polite"></p>
+     <p class="canva-text leading-relaxed mb-6" style="color: rgb(52, 82, 115);">Terima kasih sudah berani bergerak dan mencoba. Coding makin seru kalau dimainkan bersama! 🚀</p>
+     <div class="flex flex-wrap gap-3"><button type="button" id="gerak-retry" class="canva-button action-button px-6 py-3" style="background: rgb(36, 87, 189); color: rgb(255, 255, 255); font-weight: 700;">Main Lagi</button> <button type="button" class="canva-button gerak-menu action-button px-6 py-3 border-2 border-current" style="background: rgb(255, 255, 255); color: rgb(36, 87, 189); font-weight: 700;">Kembali ke Menu</button>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer class="max-w-5xl mx-auto mt-10 text-center">
+   <p class="canva-text" style="color: rgb(52, 82, 115);">Belajar kode itu seru—pelan-pelan juga tetap maju!</p>
+  </footer>
+ </div>
+ <script>
+  const games = {
+   quiz: { title:"Kuis HTML & CSS", instruction:"Pilih satu jawaban untuk setiap soal. Yuk, uji pemahamanmu!", total:4, answers:[1,2,0,1] },
+   order: { title:"Susun Struktur HTML", instruction:"Tekan bagian-bagian HTML dari langkah pertama sampai keempat secara berurutan!", total:4 },
+   style: { title:"Tebak Styling CSS", instruction:"Baca aturan CSS, lalu pilih tampilan yang akan dihasilkan.", total:4, answers:[0,1,0,1] }
+  };
+  let currentGame = null, index = 0, score = 0, answered = false;
+  const $ = id => document.getElementById(id);
+  const panels = [...document.querySelectorAll(".question")];
+  function focusFirst(selector) { document.querySelector(selector)?.focus(); }
+  function showFeedback(kind) {
+   $("feedback").hidden = false;
+   $("feedback").style.background = kind === "wrong" || kind === "orderWrong" ? "#fff0e9" : "#dcf8e9";
+   ["correct-feedback","wrong-feedback","order-wrong-feedback"].forEach(id => $(id).hidden = true);$({correct:"correct-feedback",wrong:"wrong-feedback",orderWrong:"order-wrong-feedback"}[kind]).hidden = false;
+  }
+  function clearFeedback() { $("feedback").hidden = true; $("next").hidden = true; }
+  function updateProgress() {
+   const total = games[currentGame].total;
+   $("progress-text").textContent = `Progres: ${index} dari ${total}`;
+   $("score-text").textContent = `Skor: ${score} / ${total}`;
+   const percent = Math.round(index / total * 100);
+   $("progress-fill").style.width = percent + "%";
+   $("progress-bar").setAttribute("aria-valuenow", String(percent));
+  }
+  function openGame(game) {
+   currentGame = game;
+   $("menu").hidden = true; $("game-view").hidden = false;
+   $("intro").hidden = false; $("play").hidden = true; $("result").hidden = true;
+   $("intro-title").textContent = games[game].title;
+   $("intro-instruction").textContent = games[game].instruction;
+   focusFirst("#start");
+  }
+  function startGame() {
+   index = 0; score = 0; answered = false;
+   $("intro").hidden = true; $("result").hidden = true; $("play").hidden = false;
+   panels.forEach(panel => {
+    panel.hidden = true;
+    panel.querySelectorAll("button").forEach(button => {
+     button.disabled = false;
+     button.classList.remove("correct","incorrect");
+    });
+   });
+   if($("selected-order")) $("selected-order").textContent = "Urutan pilihanmu akan muncul di sini.";
+   renderQuestion();
+  }
+  function renderQuestion() {
+   clearFeedback(); answered = false; updateProgress();
+   panels.forEach(panel => {
+    panel.hidden = !(panel.dataset.gamePanel === currentGame &&
+     (currentGame === "order" || Number(panel.dataset.question) === index));
+   });
+   focusFirst(".question:not([hidden]) button");
+  }
+  function finish() {
+   $("play").hidden = true; $("result").hidden = false;
+   $("final-score").textContent = `Skor akhir: ${score} dari ${games[currentGame].total}`;
+   focusFirst("#retry");
+  }
+  function advance() {
+   index++;
+   if (index >= games[currentGame].total) finish();
+   else renderQuestion();
+  }
+  document.querySelectorAll(".open-game").forEach(button =>
+   button.addEventListener("click", () => openGame(button.dataset.game)));
+  document.querySelectorAll(".menu-button").forEach(button => button.addEventListener("click", () => {
+   $("game-view").hidden = true; $("menu").hidden = false;
+   focusFirst(`[data-game="${currentGame}"]`);
+  }));
+  $("start").addEventListener("click", startGame);
+  $("retry").addEventListener("click", startGame);
+  $("next").addEventListener("click", advance);
+  
+  document.querySelectorAll("[data-answer]").forEach(button => button.addEventListener("click", () => {
+   if (answered) return;
+   answered = true;
+   const correct = Number(button.dataset.answer) === games[currentGame].answers[index];
+   if (correct) score++;
+   button.classList.add(correct ? "correct" : "incorrect");
+   button.closest(".question").querySelectorAll("button").forEach(option => option.disabled = true);
+   showFeedback(correct ? "correct" : "wrong");
+   updateProgress();
+   $("next").hidden = false;
+   $("next").focus();
+  }));
+
+  // Logika Menyusun Struktur HTML yang Diperbaiki
+  document.querySelectorAll("[data-step]").forEach(button => button.addEventListener("click", () => {
+   if (Number(button.dataset.step) !== index + 1) {
+    showFeedback("orderWrong");
+    return;
+   }
+   button.disabled = true; button.classList.add("correct");
+   score++;
+   const selected = $("selected-order");
+   if (index === 0) selected.textContent = "";
+   selected.textContent += (index ? " → " : "") + button.textContent.trim();
+   
+   index++;
+   updateProgress();
+   
+   if (index >= games[currentGame].total) {
+    showFeedback("correct");
+    setTimeout(finish, 1000);
+   }
+  }));
+
+  // Logika Gerak (Ice Breaking)
+  const gerakChallenges = [
+   "Buat pose seperti tag HTML pembuka (<p>)!",
+   "Gaya robot seperti CSS mengatur tampilan web!",
+   "Tebak elemen HTML dari gerakan temanmu!",
+   "Buat slogan coding kreatif dalam 5 detik!"
+  ];
+  let gerakRound = 0, gerakScore = 0;
+  const gerakTotal = 4;
+  
+  $("gerak-open").addEventListener("click", () => {
+   $("menu").hidden = true; $("gerak-view").hidden = false;
+   $("gerak-intro").hidden = false; $("gerak-play").hidden = true; $("gerak-result").hidden = true;
+  });
+  document.querySelectorAll(".gerak-menu").forEach(btn => btn.addEventListener("click", () => {
+   $("gerak-view").hidden = true; $("menu").hidden = false;
+  }));
+  $("gerak-start").addEventListener("click", () => {
+   gerakRound = 0; gerakScore = 0;
+   $("gerak-intro").hidden = true; $("gerak-play").hidden = false;
+   renderGerak();
+  });
+  function renderGerak() {
+   $("gerak-round").textContent = `Tantangan: ${gerakRound + 1} dari ${gerakTotal}`;
+   $("gerak-score").textContent = `Poin: ${gerakScore}`;
+   $("gerak-challenge-text").textContent = gerakChallenges[gerakRound];
+  }
+  $("gerak-next").addEventListener("click", () => {
+   gerakScore++;
+   gerakRound++;
+   if (gerakRound >= gerakTotal) finishGerak();
+   else renderGerak();
+  });
+  $("gerak-skip").addEventListener("click", () => {
+   gerakRound++;
+   if (gerakRound >= gerakTotal) finishGerak();
+   else renderGerak();
+  });
+  function finishGerak() {
+   $("gerak-play").hidden = true; $("gerak-result").hidden = false;
+   $("gerak-final-score").textContent = `Total Poin: ${gerakScore} dari ${gerakTotal}`;
+  }
+  $("gerak-retry").addEventListener("click", () => {
+   gerakRound = 0; gerakScore = 0;
+   $("gerak-result").hidden = true; $("gerak-play").hidden = false;
+   renderGerak();
+  });
+ </script>
+</body>
+</html>
